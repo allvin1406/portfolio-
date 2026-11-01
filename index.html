@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allvin P – Electronics & Embedded Systems Engineer</title>
+<meta name="description" content="Portfolio of Allvin P, final-year Electronics and Communication Engineering student focused on embedded systems, PCB design and hardware development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+<style>
+:root{--bg:#050a18;--bg2:#0a1330;--card:rgba(20,36,80,.38);--line:rgba(80,140,255,.22);--tx:#e8eefc;--mut:#9fb0d4;--blue:#2f7bff;--cyan:#22d3ee;
+color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:radial-gradient(1200px 700px at 80% -10%,#0d2260 0%,transparent 60%),var(--bg);color:var(--tx);font:16px/1.65 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;opacity:.5;pointer-events:none;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none' stroke='%232f7bff' stroke-opacity='.16'%3E%3Cpath d='M0 40h50l12 12h40M80 0v30l14 14v50M0 120h30l16-16h50l14 14v42M160 70h-40l-10 10'/%3E%3Ccircle cx='50' cy='40' r='3'/%3E%3Ccircle cx='102' cy='52' r='3'/%3E%3Ccircle cx='94' cy='94' r='3'/%3E%3Ccircle cx='30' cy='120' r='3'/%3E%3C/svg%3E");animation:drift 60s linear infinite}
+@keyframes drift{to{background-position:160px 160px}}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h1,h2,h3{line-height:1.15;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:10px;letter-spacing:-.01em}
+.sub{color:var(--mut);max-width:62ch;margin:0 0 34px}
+.glass{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .2s,transform .2s}
+.glass:hover{border-color:rgba(34,211,238,.5);transform:translateY(-3px)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.muted{color:var(--mut)}
+.ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(47,123,255,.28),rgba(34,211,238,.18));color:var(--cyan);margin-bottom:14px}
+.ic svg{width:21px;height:21px}
+.tag{display:inline-block;font-size:.78rem;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:#bcd2ff;margin:0 6px 6px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--line);cursor:pointer;font:inherit;font-weight:600;color:var(--tx);background:transparent;transition:box-shadow .2s,background .2s}
+.btn.p{background:linear-gradient(135deg,var(--blue),#1fb5e8);border-color:transparent;color:#03102b}
+.btn.p:hover{box-shadow:0 0 28px rgba(34,211,238,.45)}
+.btn:not(.p):hover{background:rgba(47,123,255,.15)}
+.btn svg{width:18px;height:18px}
+/* nav */
+header{position:sticky;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px);background:rgba(5,10,24,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:700;font-size:1.15rem}.logo span{color:var(--cyan)}
+.links{display:flex;gap:4px;align-items:center}
+.links a{padding:7px 11px;border-radius:9px;font-size:.9rem;color:var(--mut)}
+.links a:hover,.links a.on{color:var(--tx);background:rgba(47,123,255,.16)}
+.links .btn{padding:8px 16px;color:#03102b}
+#menu{display:none;background:none;border:1px solid var(--line);color:var(--tx);border-radius:10px;padding:8px;cursor:pointer}
+#menu svg{width:22px;height:22px;display:block}
+@media(max-width:1020px){#menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;padding:14px 22px 20px;background:#070e24;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+/* hero */
+.hero{padding:70px 0 50px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.avail{display:inline-flex;gap:9px;align-items:center;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:var(--card);font-size:.85rem;margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.02em;margin-bottom:14px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h2{font-size:clamp(1.05rem,2.2vw,1.3rem);color:#c4d6ff;font-weight:500;margin-bottom:16px}
+.hero p{color:var(--mut);max-width:54ch;margin:0 0 26px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.soc a{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:grid;place-items:center;color:var(--mut)}
+.soc a:hover{color:var(--cyan);border-color:var(--cyan)}
+.soc svg{width:20px;height:20px}
+.board{width:100%;height:auto;filter:drop-shadow(0 0 40px rgba(47,123,255,.35))}
+.tr{stroke-dasharray:6 10;animation:flow 3s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-64}}
+@media(prefers-reduced-motion:reduce){*,body::before,.tr,.dot{animation:none!important}html{scroll-behavior:auto}}
+.hero .wrap>div:first-child>*{animation:in .7s both}
+.hero .wrap>div:first-child>*:nth-child(2){animation-delay:.08s}.hero .wrap>div:first-child>*:nth-child(3){animation-delay:.16s}.hero .wrap>div:first-child>*:nth-child(4){animation-delay:.24s}.hero .wrap>div:first-child>*:nth-child(5){animation-delay:.32s}.hero .wrap>div:first-child>*:nth-child(6){animation-delay:.4s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:34px}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about p{color:#c3d0ee;margin:0 0 14px}
+.stat b{display:block;font-size:1.5rem;color:var(--cyan)}
+.stat{padding:16px 18px}
+/* generic lists */
+.glass h3{font-size:1.1rem;margin-bottom:6px}
+.glass p{margin:0 0 10px;color:var(--mut);font-size:.95rem}
+.glass ul{margin:8px 0 0;padding-left:18px;color:#c3d0ee;font-size:.93rem}
+.meta{font-size:.85rem;color:var(--cyan);margin-bottom:8px}
+.link{color:var(--cyan);font-weight:600;display:inline-flex;gap:6px;align-items:center;margin-top:10px}
+.link svg{width:16px;height:16px}
+.thumb{height:130px;border-radius:12px;margin-bottom:16px;border:1px solid var(--line);display:grid;place-items:center;color:var(--cyan);background:linear-gradient(135deg,rgba(47,123,255,.25),rgba(5,10,24,.6))}
+.thumb svg{width:48px;height:48px}
+/* timeline */
+.tl{position:relative;padding-left:28px;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--blue),var(--cyan))}
+.tl .glass{position:relative}
+.tl .glass::before{content:"";position:absolute;left:-28px;top:26px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--cyan)}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:28px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+.ci{display:flex;gap:14px;align-items:center;padding:12px 0;overflow-wrap:anywhere}
+.ci .ic{margin:0;flex:none}
+form{display:grid;gap:14px}
+label{font-size:.88rem;color:var(--mut);display:grid;gap:6px}
+input,textarea{font:inherit;color:var(--tx);background:rgba(5,10,24,.7);border:1px solid var(--line);border-radius:10px;padding:11px 13px;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--cyan);border-color:transparent}
+.err{color:#ff8a8a;font-size:.8rem;min-height:1em}
+[aria-invalid=true]{border-color:#ff8a8a}
+#status{font-size:.9rem;color:var(--mut);min-height:1.4em}
+footer{border-top:1px solid var(--line);padding:30px 0}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;color:var(--mut);font-size:.9rem}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);opacity:0;background:#0f1c44;border:1px solid var(--cyan);padding:12px 18px;border-radius:12px;transition:.3s;z-index:40;max-width:90vw;font-size:.9rem}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#home">Allvin<span>.P</span></a>
+<button id="menu" aria-label="Toggle menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+<div class="links" id="links">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
+<a class="btn p resume" href="#">Download Resume</a>
+</div></nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div>
+<div class="avail"><span class="dot"></span>Open to Graduate Engineer Trainee Opportunities – 2027</div>
+<h1>Hi, I’m <em>Allvin P</em></h1>
+<h2>Electronics &amp; Communication Engineer | Embedded Systems Enthusiast</h2>
+<p>Passionate about electronics, embedded systems, PCB design, and innovative hardware solutions. I enjoy transforming technical ideas into practical engineering solutions.</p>
+<div class="row" style="margin-bottom:24px"><a class="btn p" href="#projects"><i data-lucide="rocket"></i>Explore My Work</a><a class="btn resume" href="#"><i data-lucide="download"></i>Download Resume</a></div>
+<div class="row soc">
+<a href="https://www.linkedin.com/in/allvin-prabhu-1420alsi" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+<a href="https://github.com/allvin1406" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+<a href="mailto:allvinprabhu@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a></div>
+</div>
+<div aria-hidden="true">
+<svg class="board" viewBox="0 0 420 380" fill="none">
+<rect x="10" y="10" width="400" height="360" rx="22" fill="#08143a" stroke="#2f7bff" stroke-opacity=".5" stroke-width="2"/>
+<g stroke="#22d3ee" stroke-width="2" class="tr" stroke-linecap="round">
+<path d="M150 150H70V70H30"/><path d="M150 190H50V250H30"/><path d="M150 230H90V320H140"/>
+<path d="M270 150H350V70H390"/><path d="M270 190H370V250H390"/><path d="M270 230H330V320H280"/>
+<path d="M190 120V50H240"/><path d="M230 260V340"/></g>
+<g fill="#050a18" stroke="#2f7bff" stroke-width="2"><circle cx="30" cy="70" r="7"/><circle cx="30" cy="250" r="7"/><circle cx="140" cy="320" r="7"/><circle cx="390" cy="70" r="7"/><circle cx="390" cy="250" r="7"/><circle cx="280" cy="320" r="7"/><circle cx="240" cy="50" r="7"/><circle cx="230" cy="340" r="7"/></g>
+<rect x="150" y="120" width="120" height="140" rx="10" fill="#0c1d52" stroke="#22d3ee" stroke-width="2"/>
+<circle cx="168" cy="138" r="5" fill="#22d3ee"/>
+<text x="210" y="188" text-anchor="middle" fill="#e8eefc" font-family="Space Grotesk,sans-serif" font-weight="700" font-size="22">STM32</text>
+<text x="210" y="212" text-anchor="middle" fill="#9fb0d4" font-family="Space Grotesk,sans-serif" font-size="12">ARM Cortex-M</text>
+<g fill="#2f7bff"><rect x="40" y="290" width="26" height="12" rx="3"/><rect x="340" y="290" width="26" height="12" rx="3"/><rect x="330" y="40" width="26" height="12" rx="3"/><rect x="60" y="30" width="26" height="12" rx="3"/></g>
+</svg></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<h2>About Me</h2><p class="sub">Electronics, embedded systems and hardware, from classroom to lab to industry floor.</p>
+<div class="about">
+<div>
+<p>I am a final-year Electronics and Communication Engineering student at CK College of Engineering and Technology, Cuddalore. I have a strong interest in electronics, embedded systems, PCB design, and hardware development.</p>
+<p>I have gained practical exposure through technical workshops, industrial visits, hackathons, and engineering projects. I have also completed specialized training in Advanced Electronics Manufacturing with Power Electronics Fundamentals at IIT Madras.</p>
+<p>I am passionate about learning new technologies, solving engineering problems, and developing innovative hardware-based solutions. My goal is to begin my professional career in the electronics and engineering industry.</p>
+</div>
+<div class="grid" style="grid-template-columns:1fr 1fr;align-content:start">
+<div class="glass stat"><b>2027</b><span class="muted">Expected Graduation</span></div>
+<div class="glass stat"><b>7.1</b><span class="muted">CGPA</span></div>
+<div class="glass stat"><b>IIT Madras</b><span class="muted">Advanced Electronics Manufacturing Training</span></div>
+<div class="glass stat"><b>Electronics</b><span class="muted">&amp; Embedded Systems</span></div>
+</div></div>
+<h2 style="margin:54px 0 20px;font-size:1.6rem">Education</h2>
+<div class="grid g2" id="edu"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Technical Skills</h2><p class="sub">Grouped by area, with no made-up proficiency scores.</p>
+<div class="grid g3" id="skillGrid"></div>
+<h2 style="margin:54px 0 20px;font-size:1.6rem">Soft Skills</h2>
+<div class="grid g3" id="soft" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))"></div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+<h2>Projects</h2><p class="sub">Hardware and software builds. Set each View Project link to a GitHub repository when it is ready.</p>
+<div class="grid g2" id="projGrid"></div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2><p class="sub">Industrial visits and hands-on workshops.</p>
+<h3 style="margin-bottom:16px">Industrial Visits</h3>
+<div class="grid g2" id="visits"></div>
+<h3 style="margin:44px 0 16px">Workshops</h3>
+<p class="muted" style="margin-top:-6px">Conducted at or associated with CK College of Engineering and Technology, Cuddalore.</p>
+<div class="grid g3" id="workshops"></div>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+<h2>Certifications</h2><p class="sub">Add a certificate PDF or image link to any card below by filling the <code>url</code> field in the data list in this page’s script.</p>
+<div class="grid g3" id="certs"></div>
+</div></section>
+
+<section id="achievements"><div class="wrap">
+<h2>Achievements &amp; Technical Events</h2><p class="sub">Training, hackathons and competitions.</p>
+<div class="tl" id="timeline"></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Let’s Connect and Build Something Innovative!</h2>
+<p class="sub">I am always interested in learning, collaborating, and exploring opportunities in electronics and engineering. Feel free to connect with me.</p>
+<div class="contact">
+<div class="glass" style="align-self:start">
+<div class="ci"><span class="ic"><i data-lucide="phone"></i></span><a href="tel:+918925440262">+91 8925440262</a></div>
+<div class="ci"><span class="ic"><i data-lucide="mail"></i></span><a href="mailto:allvinprabhu@gmail.com">allvinprabhu@gmail.com</a></div>
+<div class="ci"><span class="ic"><i data-lucide="linkedin"></i></span><a href="https://www.linkedin.com/in/allvin-prabhu-1420alsi" target="_blank" rel="noopener">linkedin.com/in/allvin-prabhu-1420alsi</a></div>
+<div class="ci"><span class="ic"><i data-lucide="github"></i></span><a href="https://github.com/allvin1406" target="_blank" rel="noopener">github.com/allvin1406</a></div>
+</div>
+<form class="glass" id="form" novalidate>
+<label>Name<input id="fn" name="name" autocomplete="name" required><span class="err"></span></label>
+<label>Email<input id="fe" name="email" type="email" autocomplete="email" required><span class="err"></span></label>
+<label>Subject<input id="fs" name="subject" required><span class="err"></span></label>
+<label>Message<textarea id="fm" name="message" rows="5" required></textarea><span class="err"></span></label>
+<button class="btn p" type="submit" style="justify-self:start"><i data-lucide="send"></i>Send Message</button>
+<div id="status" role="status" aria-live="polite">This form opens your email app with the message ready to send. It does not send anything by itself.</div>
+</form>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div>Designed &amp; Developed by Allvin P<br>© 2026 Allvin P. All Rights Reserved.</div>
+<div class="row soc">
+<a href="https://www.linkedin.com/in/allvin-prabhu-1420alsi" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+<a href="https://github.com/allvin1406" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+<a href="mailto:allvinprabhu@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a></div>
+</div></footer>
+<div id="toast" role="status"></div>
+
+<script>
+// ---- Edit these when ready ----
+var RESUME_URL = "";            // link to your resume PDF
+var $ = function(s){return document.querySelector(s)};
+var card = function(icon,title,body,extra){return '<div class="glass"><span class="ic"><i data-lucide="'+icon+'"></i></span><h3>'+title+'</h3>'+(body?'<p>'+body+'</p>':'')+(extra||'')+'</div>'};
+var D = {
+edu:[
+ ['graduation-cap','Bachelor of Engineering','Electronics and Communication Engineering<br>CK College of Engineering and Technology (Autonomous), Cuddalore','<div class="meta">2023 – 2027 | Currently Pursuing Final Year</div><span class="tag">CGPA: 7.1</span>'],
+ ['book-open','Higher Secondary Certificate (HSC)','CSI St David’s Higher Secondary School, Cuddalore','<div class="meta">2022 – 2023</div><span class="tag">Percentage: 65%</span>']],
+skills:[
+ ['code-2','Programming Languages',['C','Java','Python']],
+ ['layers','PCB Design',['PCB Layout Design','Schematic Design']],
+ ['cpu','Embedded Systems',['STM32 Processor','Microcontroller Fundamentals','Arduino']],
+ ['zap','Electronics',['Digital Electronics','Analog Electronics','Circuit Design']],
+ ['plug','Hardware',['Sensors','Actuators','Hardware Interfacing']],
+ ['compass','Areas of Interest',['VLSI Design','PCB Design','Embedded Systems and IoT','Artificial Intelligence and Machine Learning','Wireless Communication']]],
+soft:[['users','Teamwork'],['flag','Leadership'],['message-circle','Communication Skills'],['puzzle','Problem-Solving'],['clock','Time Management']],
+proj:[
+ ['shield-alert','Electric Fence Security System','Hardware / Embedded Systems','Designed a hardware-based security system to detect and prevent unauthorized contact or tampering with electric fences. Implemented sensors and alert mechanisms to improve safety and provide real-time intrusion detection.',['Hardware-based security solution','Sensor integration','Intrusion detection','Alert mechanism'],['Sensors','Alert system','Embedded'],''],
+ ['smartphone','Smart Canteen App','Mobile Application Development','Developed a mobile application for digital menu browsing and online food ordering. The application aims to improve canteen operations by reducing queue time and enabling faster order management.',['Digital menu browsing','Online food ordering','Improved order management','Reduced waiting time'],['Mobile app','Ordering'],'']],
+visits:[
+ ['plane','Aero Knotz (Drones India Pvt. Ltd.)','Gained hands-on exposure to drone operations and applications in defense, aerial videography, and agricultural spraying.'],
+ ['radio-tower','BSNL – Rajiv Gandhi Memorial Telecom Training Centre','Learned about optical fiber communication, switching systems, and network operations.'],
+ ['bot','Robomiracle','Explored humanoid robots, AI-based systems, and real-time automation technologies.'],
+ ['plane-landing','International Airport, Madurai','Gained exposure to airport communication and signal-oriented systems, including signal transmission, communication networks, and their applications in airport operations.']],
+work:[['cpu','Embedded System Design using STM32 Processor','EMCOG Solutions Pvt. Ltd.'],['circuit-board','Raspberry Pi Workshop','EDIYLABS Technology Solutions'],['activity','Altair PSIM and FluxMotor Workshop',''],['glasses','AR/VR Workshop',''],['brain','AI & Machine Learning Workshop','GenOrcasX']],
+certs:[
+ ['Elite Certification in Java Programming','NPTEL','Score: 75%',''],['Joy of Computing Using Python','NPTEL','Score: 58%',''],['OpenCV Bootcamp Certification','OpenCV University','Score: 100%',''],
+ ['Oracle Cloud Infrastructure','Oracle Certified Foundations Program','',''],['AI Business Professionals','HP LIFE','',''],['Full Stack Development','NoviTech','','']],
+tl:[
+ ['Advanced Electronics Manufacturing – IIT Madras','Successfully completed an 11-day (99 hours) course on Advanced Electronics Manufacturing with Power Electronics Fundamentals at Central Electronics Centre, IIT Madras, in association with IITM Pravartak.'],
+ ['IFET Hack Warriors – National Level Hackathon','Participated in a 24-hour National Level Hackathon on AR & VR at IFET College of Engineering, Villupuram.'],
+ ['PALS innoWaH – Cluster Finals','Participated in the hardware category with the project “Detect and Prevent Unauthorized Use of Electric Fences” at SRM Institute of Science and Technology.'],
+ ['IDEAMAKERS 3.0 – National Level Idea Competition','Received an Appreciation Certificate for presenting “Intelligence MCB Fault Detection” at St. Anne’s College of Engineering and Technology, Panruti.'],
+ ['Intra-College Hackathon','Participated in an 8-hour hackathon on Internet of Things and Artificial Intelligence at CK College of Engineering and Technology.'],
+ ['Project showcase','Showcased the Electric Fence Security System at CK College of Engineering and Technology.']]
+};
+$('#edu').innerHTML = D.edu.map(function(e){return card(e[0],e[1],e[2],e[3])}).join('');
+$('#skillGrid').innerHTML = D.skills.map(function(s){return card(s[0],s[1],'',s[2].map(function(t){return '<span class="tag">'+t+'</span>'}).join(''))}).join('');
+$('#soft').innerHTML = D.soft.map(function(s){return '<div class="glass" style="text-align:center"><span class="ic" style="margin:0 auto 10px"><i data-lucide="'+s[0]+'"></i></span><b>'+s[1]+'</b></div>'}).join('');
+$('#projGrid').innerHTML = D.proj.map(function(p){var u=p[7];return '<article class="glass"><div class="thumb"><i data-lucide="'+p[0]+'"></i></div><div class="meta">'+p[2]+'</div><h3>'+p[1]+'</h3><p>'+p[3]+'</p><ul>'+p[4].map(function(h){return '<li>'+h+'</li>'}).join('')+'</ul><div style="margin-top:12px">'+p[5].map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</div>'+(u?'<a class="link" href="'+u+'" target="_blank" rel="noopener">View Project<i data-lucide="arrow-up-right"></i></a>':'<a class="link" href="https://github.com/allvin1406" target="_blank" rel="noopener">View Project<i data-lucide="arrow-up-right"></i></a>')+'</article>'}).join('');
+$('#visits').innerHTML = D.visits.map(function(v){return card(v[0],v[1],v[2])}).join('');
+$('#workshops').innerHTML = D.work.map(function(w){return card(w[0],w[1],w[2])}).join('');
+$('#certs').innerHTML = D.certs.map(function(c){return card('award',c[0],c[1],(c[2]?'<span class="tag">'+c[2]+'</span>':'')+(c[3]?'<a class="link" href="'+c[3]+'" target="_blank" rel="noopener">View certificate</a>':''))}).join('');
+$('#timeline').innerHTML = D.tl.map(function(t){return '<div class="glass"><h3>'+t[0]+'</h3><p style="margin:0">'+t[1]+'</p></div>'}).join('');
+if(window.lucide) lucide.createIcons(); else window.addEventListener('load',function(){window.lucide&&lucide.createIcons()});
+
+// toast
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(function(){t.classList.remove('show')},3200)}
+// resume
+document.querySelectorAll('.resume').forEach(function(a){
+ if(RESUME_URL){a.href=RESUME_URL;a.target='_blank';a.rel='noopener'}
+ else a.addEventListener('click',function(e){e.preventDefault();toast('Resume link not set yet. Add your PDF link to RESUME_URL in the page script.')});
+});
+// mobile menu
+var menu=$('#menu'),links=$('#links');
+menu.addEventListener('click',function(){var o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+links.addEventListener('click',function(e){if(e.target.tagName==='A')links.classList.remove('open')});
+// active link
+var secs=document.querySelectorAll('main section');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.querySelectorAll('a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(function(s){io.observe(s)});
+// form
+$('#form').addEventListener('submit',function(e){
+ e.preventDefault();
+ var f=[['#fn','Enter your name.'],['#fe','Enter a valid email address.'],['#fs','Enter a subject.'],['#fm','Write a message of at least 10 characters.']],ok=true;
+ f.forEach(function(x){var el=$(x[0]),v=el.value.trim(),bad=!v||(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v))||(el.id==='fm'&&v.length<10);
+  el.setAttribute('aria-invalid',bad);el.nextElementSibling.textContent=bad?x[1]:'';if(bad)ok=false});
+ if(!ok){$('#status').textContent='Fix the highlighted fields and try again.';return}
+ var body='From: '+$('#fn').value.trim()+' ('+$('#fe').value.trim()+')\n\n'+$('#fm').value.trim();
+ $('#status').textContent='Opening your email app. Press send there to deliver the message.';
+ location.href='mailto:allvinprabhu@gmail.com?subject='+encodeURIComponent($('#fs').value.trim())+'&body='+encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
